@@ -1,0 +1,21 @@
+{   
+    "manifest_version":2,
+    "name" :"Banana",
+    "version":"0.01",
+    "description":"Okay Okay" ,
+    "browser_action":{
+      "default_popup" : "popup.html" 
+    },
+    "background" :["background.js"],
+    "content_scripts":[
+       { "matches" :["*://*.codeforces.com/problemset/*"],
+         "js":["codeforces.js"],
+         "css":["codeforces.css"]
+
+      }
+    ],
+   
+   "permissions" :[
+     "tabs","activeTab"
+   ]
+}
